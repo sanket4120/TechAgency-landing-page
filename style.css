@@ -1,0 +1,536 @@
+:root {
+  --brightred: hsl(12, 88%, 59%);
+  --blue: #0a043c;
+  --primaryfont: #222831;
+  --secondayfont: #929aab;
+}
+
+/* global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: var(--primaryfont);
+  background-color: #feffff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.8rem 1.7rem;
+  transition: background-color 0.3s linear;
+  font-size: 0.9rem;
+  min-width: 10rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.empty-button {
+  border: 2px var(--brightred) solid;
+}
+
+.empty-button,
+.empty-button a {
+  color: var(--brightred);
+}
+
+.empty-button:hover {
+  background-color: var(--brightred);
+}
+.empty-button:hover,
+.empty-button:hover a {
+  color: #fff;
+}
+
+.full-button {
+  background-color: var(--brightred);
+  border: 2px var(--brightred) solid;
+}
+
+.full-button,
+.full-button a {
+  color: #fff;
+}
+
+.full-button:hover {
+  background-color: transparent;
+}
+.full-button:hover,
+.full-button:hover a {
+  color: var(--brightred);
+}
+
+.cta-button {
+  border: 2px var(--blue) solid;
+  background-color: var(--blue);
+}
+
+.cta-button,
+.cta-button a {
+  color: #fff;
+}
+
+.cta-button:hover {
+  background-color: transparent;
+}
+.cta-button:hover,
+.cta-button:hover a {
+  color: var(--blue);
+}
+
+.highlight {
+  color: var(--brightred);
+}
+
+.secondary-text {
+  color: var(--secondayfont);
+}
+
+.m {
+  margin: 1rem;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+img {
+  display: block;
+}
+
+.center-btn {
+  text-align: center;
+}
+.card {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.text-wrapper {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* header */
+
+#title {
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin: 0 0.8rem;
+}
+
+nav ul li a {
+  color: var(--secondayfont);
+}
+
+nav ul li a:hover {
+  color: var(--primaryfont);
+}
+
+.show {
+  display: block;
+}
+
+#menu {
+  display: none;
+}
+
+/* hero section */
+
+.hero-wrapper {
+  height: calc(100vh - 5rem);
+  background-color: #eff8ff;
+}
+
+.hero-wrapper .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#hero h1 {
+  font-size: 3rem;
+}
+
+#hero p:nth-child(1) {
+  color: var(--brightred);
+}
+
+#hero-button-container button {
+  width: 100%;
+}
+
+#hero-button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+/* services */
+
+.services {
+  padding: 5rem 0;
+}
+
+.services-card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+  text-align: left;
+  margin: 2.5rem 0;
+}
+
+.services-card .card-image ion-icon {
+  border-radius: 5px;
+}
+
+.services-card .card:nth-child(1) ion-icon {
+  font-size: xx-large;
+  width: 40px;
+  height: 50px;
+  padding: 3px;
+  background-color: #b8b5ff;
+}
+
+.services-card .card:nth-child(2) ion-icon {
+  font-size: xx-large;
+  width: 40px;
+  height: 50px;
+  padding: 3px;
+  background-color: #adeecf;
+}
+
+.services-card .card:nth-child(3) ion-icon {
+  font-size: xx-large;
+  width: 40px;
+  height: 50px;
+  padding: 3px;
+  background-color: #ff7171;
+}
+
+/* work */
+.projects {
+  margin-bottom: 5rem;
+}
+
+#explore-all {
+  text-align: right;
+}
+
+.work-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.work-grid figure img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.work-grid figcaption {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* testimonials */
+
+.testimonial {
+  margin-bottom: 5rem;
+}
+
+.testimonial-card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 200px;
+}
+
+.testimonial-card .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.testimonial-card .review {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* teams */
+.team {
+  margin-bottom: 5rem;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member ul li {
+  display: inline-block;
+  margin: 2rem 0.5rem 0;
+}
+
+.member ul ion-icon {
+  font-size: 1.3rem;
+  color: var(--brightred);
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* contact */
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin: 7rem 0;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.contact-info {
+  align-self: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  outline: none;
+  border: 2px var(--secondayfont) solid;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 20vh;
+  grid-column: 1/3;
+}
+
+.contact-info ul li {
+  display: inline-block;
+  margin: 2rem 0.5rem 0;
+}
+
+.contact-info ul ion-icon {
+  font-size: 1.6rem;
+  color: var(--brightred);
+}
+
+/* footer */
+footer {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 1rem 0;
+}
+
+footer h2,
+footer h3 {
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+.contact-footer #mail {
+  color: var(--primaryfont);
+}
+
+.contact-footer ul li {
+  display: inline-block;
+  margin: 2rem 0.5rem 0;
+}
+
+.contact-footer ul ion-icon {
+  font-size: 1.3rem;
+  color: var(--brightred);
+}
+
+.contact-footer ul li a {
+  color: var(--brightred);
+}
+
+/* -----------------media queries------------- */
+
+@media screen and (max-width: 1000px) {
+  .text-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  /* header */
+  header button {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  nav {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6rem;
+    text-align: center;
+    border-radius: 7px;
+    width: 70%;
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
+
+  nav ul li {
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+  }
+}
+
+/* hero section */
+@media screen and (max-width: 480px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero-button-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* testimonials */
+
+@media screen and (max-width: 683px) {
+  .testimonial-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* contact */
+@media screen and (max-width: 703px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .contact-form {
+    margin: 1rem 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contact-form textarea {
+    grid-column: 1/2;
+  }
+  .contact form button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* footer */
+
+@media screen and (max-width: 703px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
